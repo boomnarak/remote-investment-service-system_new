@@ -1,0 +1,10 @@
+html {
+  font-family: "Kanit","Kanit" ;
+}
+
+
+@font-face {
+    font-family: Kanit;
+    src: url(../fonts/Kanit.ttf) format("truetype");
+    font-weight: 400;
+}
