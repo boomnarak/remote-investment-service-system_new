@@ -1,20 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './router/app-routing.module';
 import { AppComponent } from './app.component';
-import { SidenavComponent } from './layouts/sidenav/sidenav.component';
-import { SublevelMenuComponent } from './layouts/sidenav/sublevel-menu.component';
+import { LayoutComponent } from './layouts/layout.component';
+import { LayoutModule } from './layouts/layout.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidenavComponent,
-    SublevelMenuComponent
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
