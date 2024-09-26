@@ -2,16 +2,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '../views/home/home.component';
 import { Error404Component } from '../views/error/error404/error404.component';
+import { LayoutComponent } from '../layouts/layout.component';
 
 const appRoutes: Routes = [
   {
     path: '',
+    component: LayoutComponent,
     children: [
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
-      { path: '404', component: Error404Component },
     ]
   },
+  { path: '404', component: Error404Component },
   { path: '**', redirectTo: '404' },
 ];
 

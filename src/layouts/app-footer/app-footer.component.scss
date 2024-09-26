@@ -1,0 +1,18 @@
+.footer-logo {
+    width: 50px;
+    margin-top: -5px;
+}
+
+@media screen and (max-width: 1090px) {
+    .footer-logo-text {
+        display: none;
+    }
+}
+
+@import '../../assets/scss/layout/variables.scss';
+
+.app-footer {
+    background-color: $color-bg-footer;
+    line-height: calc(#{$footer-height} - 1px);
+    height: $footer-height;
+}
