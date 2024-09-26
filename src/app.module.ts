@@ -5,12 +5,14 @@ import { LayoutComponent } from './layouts/layout.component';
 import { LayoutModule } from './layouts/layout.module';
 import { AppRoutingModule } from './router/app-routing.module';
 import { Error404Component } from './views/error/error404/error404.component';
+import { HomeComponent } from './views/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
-    Error404Component
+    Error404Component,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
