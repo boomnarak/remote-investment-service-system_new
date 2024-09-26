@@ -7,6 +7,25 @@ export const navbarData: INavBarData[] = [
         label: 'Registration',
     },
     {
+        routeLink: 'work-basket',
+        icon: 'fal fa-home',
+        label: 'Work basket',
+        items: [
+            {
+                routeLink: 'transaction-basket',
+                label: 'Transaction basket'
+            },
+            {
+                routeLink: 'maintenance-basket',
+                label: 'Maintenance basket'
+            },
+            {
+                routeLink: 'registration-basket',
+                label: 'Registration basket'
+            }
+        ]
+    },
+    {
         routeLink: 'transaction',
         icon: 'fal fa-home',
         label: 'Transaction',
