@@ -39,7 +39,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
     </li>
   </ul>
   `,
-  styleUrls: ['./sidenav.component.css'],
+  styleUrls: ['./sidenav.component.scss'],
   animations: [
     trigger('submenu', [
       state('hidden', style({
