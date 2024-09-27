@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidenavComponent } from './sidenav/sidenav.component';
-// import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
+import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
 import { RouterModule } from '@angular/router';
 import { ContentComponent } from './content/content.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
 
 @NgModule({
-  declarations: [SidenavComponent, ContentComponent, AppFooterComponent],
+  declarations: [SidenavComponent, ContentComponent, AppFooterComponent, SublevelMenuComponent],
   imports: [
     RouterModule,
     CommonModule
   ],
-  exports: [SidenavComponent, ContentComponent, AppFooterComponent],
+  exports: [SidenavComponent, ContentComponent, AppFooterComponent, SublevelMenuComponent],
 })
 export class LayoutModule { }
