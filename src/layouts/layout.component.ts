@@ -11,7 +11,7 @@ interface SideNavToggle {
 })
 export class LayoutComponent {
   title = 'remote-invesment-service-system';
-
+  isCollapsed = false;
   isSideNavCollapsed = false;
   screenWidhth = 0;
 

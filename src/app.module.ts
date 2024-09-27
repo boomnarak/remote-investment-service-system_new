@@ -6,6 +6,8 @@ import { LayoutModule } from './layouts/layout.module';
 import { AppRoutingModule } from './router/app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { Error404Component } from './pages/error/error404/error404.component';
+import { NgZorroAntdModule } from './plugins/ng-zorro-antd-module.module';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { Error404Component } from './pages/error/error404/error404.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LayoutModule
+    LayoutModule,
+    NgZorroAntdModule
   ],
   providers: [],
   bootstrap: [AppComponent]
