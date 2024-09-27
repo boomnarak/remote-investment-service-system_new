@@ -67,14 +67,14 @@ export class SublevelMenuComponent implements OnInit {
   @Input() expanded: boolean | undefined;
   @Input() multiple = false;
 
-  ngOnInit(){
+  ngOnInit() {
     console.log('initial')
   }
 
   handleClick(item: INavBarData): void {
     if (!this.multiple) {
       if (this.data.items && this.data.items.length > 0) {
-        for ( const modelItem of this.data.items) {
+        for (const modelItem of this.data.items) {
           if (item !== modelItem && modelItem.expanded) {
             modelItem.expanded = false;
           }
