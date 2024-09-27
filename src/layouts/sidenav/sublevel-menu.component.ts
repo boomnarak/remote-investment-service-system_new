@@ -1,4 +1,4 @@
-import { Component, Input, model, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { INavBarData } from './helper';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
@@ -13,7 +13,8 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
     class="sublevel-nav"
     >
     <li *ngFor="let item of data.items" class=sublevel-nav-item>
-      <a class="sublevel-nav-link"
+      <a class="sublevel-nav-link" tabindex="0"
+      (keypress)="handleClick(item)"
       (click)="handleClick(item)" *ngIf="item.items && item.items.length > 0">
         <i class="sublevel-link-icon fa fa-circle"></i>
         <span class=sublevel-link-text *ngIf="collapsed" > {{item.label}} </span>
@@ -21,7 +22,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
         [ngClass]="!item.expanded ? 'fal fa-angle-right' : 'fal fa-angle-down'"
         ></i>
       </a>
-      <a href="class=sublevel-nav-link"
+      <a href="class=sublevel-nav-link" tabindex="1"
       *ngIf="!item.items || (item.items && item.items.length === 0)"
       [routerLink]="[item.routeLink]"
       routerLinkActive="active-sublevel"
@@ -66,16 +67,14 @@ export class SublevelMenuComponent implements OnInit {
   @Input() expanded: boolean | undefined;
   @Input() multiple = false;
 
-  constructor() { }
-
-  ngOnInit(): void {
-
+  ngOnInit(){
+    console.log('initial')
   }
 
-  handleClick(item: any): void {
+  handleClick(item: INavBarData): void {
     if (!this.multiple) {
       if (this.data.items && this.data.items.length > 0) {
-        for (let modelItem of this.data.items) {
+        for ( const modelItem of this.data.items) {
           if (item !== modelItem && modelItem.expanded) {
             modelItem.expanded = false;
           }

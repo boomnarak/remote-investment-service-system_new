@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppFooterComponent implements OnInit{
   ngOnInit() {
+    console.log("")
   }
 
 }

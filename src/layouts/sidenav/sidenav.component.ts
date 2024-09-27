@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { navbarData } from './navbar-data';
 
 interface SideNavToggle {
@@ -7,30 +7,26 @@ interface SideNavToggle {
 }
 
 @Component({
-  selector: 'riss-sidenav',
+  selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss']
 })
-export class SidenavComponent implements OnInit {
+export class SidenavComponent {
 
-  @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
-  screenWidth: number = 0;
-  collapsed: boolean = true;
+  @Output() toggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter<SideNavToggle>();
+
+  screenWidth = 0;
+  collapsed = true;
   navData = navbarData;
-  multiple: boolean = false;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+  multiple = false;
 
   toggleCollapse(): void {
     this.collapsed = !this.collapsed;
-    this.onToggleSideNav.emit({ collapsed: this.collapsed, screenWidth: this.screenWidth });
+    this.toggleSideNav.emit({ collapsed: this.collapsed, screenWidth: this.screenWidth });
   }
 
   closeSidenav(): void {
     this.collapsed = false;
-    this.onToggleSideNav.emit({ collapsed: this.collapsed, screenWidth: this.screenWidth });
+    this.toggleSideNav.emit({ collapsed: this.collapsed, screenWidth: this.screenWidth });
   }
 }
