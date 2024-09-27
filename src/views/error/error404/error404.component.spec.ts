@@ -10,7 +10,7 @@ describe('Error404Component', () => {
     await TestBed.configureTestingModule({
       declarations: [Error404Component]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(Error404Component);
     component = fixture.componentInstance;
