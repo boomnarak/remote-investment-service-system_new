@@ -1,5 +1,7 @@
 <div>
-    <div id="navigatorBar"><app-sidenav (toggleSideNav)="onToggleSideNav($event)"></app-sidenav></div>
+    <div id="navigatorBar">
+        <app-sidenav (toggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+    </div>
     <div id="headerBar">HeaderBar</div>
     <div id="content"><router-outlet></router-outlet></div>
     <div id="footer"><app-app-footer></app-app-footer></div>

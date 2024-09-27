@@ -1,17 +1,24 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
-import { RouterModule } from '@angular/router';
-import { ContentComponent } from './content/content.component';
-import { AppFooterComponent } from './app-footer/app-footer.component';
+import { NgModule } from '@angular/core'
+import { CommonModule } from '@angular/common'
+import { SidenavComponent } from './sidenav/sidenav.component'
+import { SublevelMenuComponent } from './sidenav/sublevel-menu.component'
+import { RouterModule } from '@angular/router'
+import { ContentComponent } from './content/content.component'
+import { AppFooterComponent } from './app-footer/app-footer.component'
 
 @NgModule({
-  declarations: [SidenavComponent, ContentComponent, AppFooterComponent, SublevelMenuComponent],
-  imports: [
-    RouterModule,
-    CommonModule
-  ],
-  exports: [SidenavComponent, ContentComponent, AppFooterComponent, SublevelMenuComponent],
+    declarations: [
+        SidenavComponent,
+        ContentComponent,
+        AppFooterComponent,
+        SublevelMenuComponent,
+    ],
+    imports: [RouterModule, CommonModule],
+    exports: [
+        SidenavComponent,
+        ContentComponent,
+        AppFooterComponent,
+        SublevelMenuComponent,
+    ],
 })
-export class LayoutModule { }
+export class LayoutModule {}
