@@ -1,4 +1,9 @@
 {
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
-  "recommendations": ["angular.ng-template"]
+  "recommendations": [
+    "dbaeumer.vscode-eslint",          // ESLint extension
+    "esbenp.prettier-vscode",          // Prettier extension
+    "angular.ng-template",             // Angular template suppor
+  ]
+
 }
