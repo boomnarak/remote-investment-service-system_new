@@ -20,6 +20,7 @@ import { LayoutModule } from './layouts/layout.module';
 import { AppRoutingModule } from './router/app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { Error404Component } from './pages/error/error404/error404.component';
+import { MenuComponent } from './layouts/menu/menu.component';
 
 registerLocaleData(en);
 
@@ -33,6 +34,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
     AppComponent,
     LayoutComponent,
     Error404Component,
+    MenuComponent,
     HomeComponent,
   ],
   imports: [
