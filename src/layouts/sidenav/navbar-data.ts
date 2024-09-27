@@ -1,4 +1,4 @@
-import { INavBarData } from './helper'
+import { INavBarData } from "./helper";
 
 export const navbarData: INavBarData[] = [
     {
@@ -13,17 +13,17 @@ export const navbarData: INavBarData[] = [
         items: [
             {
                 routeLink: 'transaction-basket',
-                label: 'Transaction basket',
+                label: 'Transaction basket'
             },
             {
                 routeLink: 'maintenance-basket',
-                label: 'Maintenance basket',
+                label: 'Maintenance basket'
             },
             {
                 routeLink: 'registration-basket',
-                label: 'Registration basket',
-            },
-        ],
+                label: 'Registration basket'
+            }
+        ]
     },
     {
         routeLink: 'transaction',
@@ -42,12 +42,12 @@ export const navbarData: INavBarData[] = [
         items: [
             {
                 routeLink: 'report/buy',
-                label: 'BUY / switch in',
+                label: 'BUY / switch in'
             },
             {
                 routeLink: 'report/sell',
-                label: 'SELL / switch out',
-            },
-        ],
-    },
-]
+                label: 'SELL / switch out'
+            }
+        ]
+    }
+];
