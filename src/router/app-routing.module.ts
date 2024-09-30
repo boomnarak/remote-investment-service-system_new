@@ -8,18 +8,18 @@ const appRoutes: Routes = [
   {
     path: '',
     component: LayoutComponent,
-    children: [
-      { path: 'home', component: HomeComponent },
-    ]
+    children: [{ path: 'home', component: HomeComponent }],
   },
   { path: '404', component: Error404Component },
   { path: '**', redirectTo: '404' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes, { scrollPositionRestoration: 'top' })],
+  imports: [
+    RouterModule.forRoot(appRoutes, { scrollPositionRestoration: 'top' }),
+  ],
   exports: [RouterModule],
   declarations: [],
-  providers: []
+  providers: [],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

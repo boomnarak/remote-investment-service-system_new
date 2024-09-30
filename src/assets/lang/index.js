@@ -1,10 +1,10 @@
 export function en() {
   return {
-    app: require('./app/en.json')
-  }
+    app: require('./app/en.json'),
+  };
 }
 export function th() {
   return {
-    app: require('./app/th.json')
-  }
+    app: require('./app/th.json'),
+  };
 }

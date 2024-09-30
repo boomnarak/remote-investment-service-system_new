@@ -1,11 +1,10 @@
 html {
-  font-family: "Arial", "digital", "Saldina";
+  font-family: 'Arial', 'digital', 'Saldina';
   font-size: 14px;
 }
 
-
 @font-face {
   font-family: digital;
-  src: url(../fonts/digital-7.ttf) format("truetype");
+  src: url(../fonts/digital-7.ttf) format('truetype');
   font-weight: 400;
 }

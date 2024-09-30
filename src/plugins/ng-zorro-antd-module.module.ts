@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 
 import { NzAffixModule } from 'ng-zorro-antd/affix';
@@ -155,7 +154,7 @@ import { NzWaterMarkModule } from 'ng-zorro-antd/water-mark';
     NzCodeEditorModule,
     NzGraphModule,
     NzQRCodeModule,
-    NzWaterMarkModule
-  ]
+    NzWaterMarkModule,
+  ],
 })
-export class NgZorroAntdModule { }
+export class NgZorroAntdModule {}

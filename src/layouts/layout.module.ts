@@ -7,11 +7,7 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 
 @NgModule({
   declarations: [ContentComponent, AppFooterComponent],
-  imports: [
-    RouterModule,
-    CommonModule,
-    NzLayoutModule
-  ],
+  imports: [RouterModule, CommonModule, NzLayoutModule],
   exports: [ContentComponent, AppFooterComponent],
 })
-export class LayoutModule { }
+export class LayoutModule {}

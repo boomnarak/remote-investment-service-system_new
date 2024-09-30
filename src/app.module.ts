@@ -12,7 +12,11 @@ import { NZ_ICONS } from 'ng-zorro-antd/icon';
 import { NZ_I18N, en_US } from 'ng-zorro-antd/i18n';
 import { IconDefinition } from '@ant-design/icons-angular';
 import * as AllIcons from '@ant-design/icons-angular/icons';
-import { HTTP_INTERCEPTORS, provideHttpClient, withJsonpSupport } from '@angular/common/http';
+import {
+  HTTP_INTERCEPTORS,
+  provideHttpClient,
+  withJsonpSupport,
+} from '@angular/common/http';
 import en from '@angular/common/locales/en';
 
 import { LayoutComponent } from './layouts/layout.component';
@@ -28,7 +32,9 @@ registerLocaleData(en);
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
 };
-const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesignIcons[key])
+const icons: IconDefinition[] = Object.keys(antDesignIcons).map(
+  (key) => antDesignIcons[key],
+);
 
 @NgModule({
   declarations: [
@@ -47,18 +53,18 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
     NgZorroAntdModule,
     BrowserAnimationsModule,
     ScrollingModule,
-    DragDropModule
+    DragDropModule,
   ],
   bootstrap: [AppComponent, LayoutModule],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpHeaderInterceptor,
-      multi: true
+      multi: true,
     },
     provideHttpClient(withJsonpSupport()),
     { provide: NZ_I18N, useValue: en_US },
-    { provide: NZ_ICONS, useValue: icons }
-  ]
+    { provide: NZ_ICONS, useValue: icons },
+  ],
 })
-export class AppModule { }
+export class AppModule {}
