@@ -1,8 +1,7 @@
 <div>
   <ul nz-menu nzMode="inline">
     <ng-container
-      *ngTemplateOutlet="menuTpl; context: { $implicit: menus }"
-    ></ng-container>
+      *ngTemplateOutlet="menuTpl; context: { $implicit: menus }"></ng-container>
     <ng-template #menuTpl let-menus>
       @for (menu of menus; track menu) {
         @if (!menu.children) {
@@ -10,8 +9,7 @@
             nz-menu-item
             [nzPaddingLeft]="menu.level * 24"
             [nzDisabled]="menu.disabled"
-            [nzSelected]="menu.selected"
-          >
+            [nzSelected]="menu.selected">
             @if (menu.icon) {
               <span nz-icon [nzType]="menu.icon"></span>
             }
@@ -24,15 +22,13 @@
             [nzOpen]="menu.open"
             [nzTitle]="menu.title"
             [nzIcon]="menu.icon"
-            [nzDisabled]="menu.disabled"
-          >
+            [nzDisabled]="menu.disabled">
             <ul>
               <ng-container
                 *ngTemplateOutlet="
                   menuTpl;
                   context: { $implicit: menu.children }
-                "
-              />
+                " />
             </ul>
           </li>
         }

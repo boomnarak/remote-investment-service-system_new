@@ -1,3 +1,3 @@
 export const baseApi = {
-  customer: '/api/customer',
-};
+  customer: '/api/customer'
+}

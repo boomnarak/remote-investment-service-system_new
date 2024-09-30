@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrl: './menu.component.scss',
+  styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
-  isCollapsed = false;
-  mode = false;
-  dark = false;
+  isCollapsed = false
+  mode = false
+  dark = false
   menus = [
     {
       level: 1,
@@ -30,31 +30,31 @@ export class MenuComponent {
               level: 3,
               title: 'Option 1',
               selected: false,
-              disabled: false,
+              disabled: false
             },
             {
               level: 3,
               title: 'Option 2',
               selected: false,
-              disabled: true,
-            },
-          ],
+              disabled: true
+            }
+          ]
         },
         {
           level: 2,
           title: 'Group 2',
           icon: 'bars',
           selected: true,
-          disabled: false,
+          disabled: false
         },
         {
           level: 2,
           title: 'Group 3',
           icon: 'bars',
           selected: false,
-          disabled: false,
-        },
-      ],
+          disabled: false
+        }
+      ]
     },
     {
       level: 1,
@@ -69,16 +69,16 @@ export class MenuComponent {
           title: 'User 1',
           icon: 'user',
           selected: false,
-          disabled: false,
+          disabled: false
         },
         {
           level: 2,
           title: 'User 2',
           icon: 'user',
           selected: false,
-          disabled: false,
-        },
-      ],
-    },
-  ];
+          disabled: false
+        }
+      ]
+    }
+  ]
 }

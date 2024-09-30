@@ -1,13 +1,13 @@
-import { Action } from '@ngrx/store';
-import { User } from '../models/user.model';
+import { Action } from '@ngrx/store'
+import { User } from '../models/user.model'
 
 export enum ArticleActionType {
-  ADD_ITEM = '[ARTICLE] Add ARTICLE',
+  ADD_ITEM = '[ARTICLE] Add ARTICLE'
 }
 
 export class AddArticleAction implements Action {
-  readonly type = ArticleActionType.ADD_ITEM;
+  readonly type = ArticleActionType.ADD_ITEM
   constructor(public payload: User) {}
 }
 
-export type ArticleAction = AddArticleAction;
+export type ArticleAction = AddArticleAction
